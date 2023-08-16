@@ -45,7 +45,6 @@
   animation: visibility 1000ms forwards;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(10px);
 }
 
 .homeContainer_right,
@@ -65,11 +64,6 @@
 .homeContainer_right > img:nth-child(2) {
   margin: 0 0 25px 0;
 }
-.button {
-  display: flex;
-  margin-top: 20px;
-  padding-left: 0;
-}
 
 .homeContainer_left {
   border-right: 1px solid grey;
@@ -77,4 +71,33 @@
 
 .homeContainer_right > img {
   margin-left: 20px;
+}
+
+.div-button {
+  background: linear-gradient(90.04deg, #019aff, rgb(21, 3, 65) 99.96%);
+  padding: 7px 30px 7px 30px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  border: transparent;
+
+  word-wrap: break-word;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  align-items: center;
+}
+
+.button {
+ 
+  border: none;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  bottom: 5px;
+}
+
+.arrow
+{
+  position: relative;
+  top:7px;
 }

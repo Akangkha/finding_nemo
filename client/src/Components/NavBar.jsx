@@ -11,15 +11,11 @@ const NavBar = (props) => {
         Finding Nemo
       </Link>
       <div>
-        <Link to="/found" className="cursor-pointer navItem color-blue ">
-          Found Something ?
-        </Link>
-
         <div
-          className="color-blue cursor-pointer navItem"
+          className="color-blue cursor-pointer navItem navButton"
           onClick={() => props.updateItemLost()}
         >
-          Lost Something ?
+          Report an item !
         </div>
         <Tooltip title="Claimed items" arrow>
           <Link to="/claimed" style={{ textDecoration: "none" }}>

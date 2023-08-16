@@ -42,7 +42,7 @@ const Card = (props) => {
         <div className="divider"></div>
         <div className="details">
           <div>
-            <h1>File a Lost Report</h1>
+            <h1>Report an item !</h1>
             <p>Enter necessary details related to your item.</p>
           </div>
           <form

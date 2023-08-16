@@ -4,6 +4,7 @@ import Card from "../Components/Card";
 import NavBar from "../Components/NavBar";
 import ListItem from "../Components/ListItem";
 import Search from "../Components/Search";
+import Wave from "../assets/Wave"
 import "../styles/Card.css";
 
 const LostPage = () => {

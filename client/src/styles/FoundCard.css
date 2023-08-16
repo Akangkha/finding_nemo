@@ -1,7 +1,6 @@
 .FoundCard {
   height: 100vh;
   width: 100vw;
-  /* background-color: rgb(1, 1, 43); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,11 +96,11 @@
   font-size: 70%;
   margin:0;
 }
-.upload_btn,
+.div-button,
 .FoundSubmit {
-  margin: 10px;
+
   background: linear-gradient(90.04deg, #019aff, rgb(21, 3, 65) 99.96%);
-  padding: 10px 30px 10px 30px;
+  padding: 7px 30px 7px 30px;
   border-radius: 10px;
   color: white;
   font-weight: bold;
@@ -109,6 +108,7 @@
   font-size: 90%;
   word-wrap: break-word;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  align-items: center;
 }
 
 .upload_btn:hover {

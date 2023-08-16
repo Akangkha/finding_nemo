@@ -12,8 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="found" element={<FoundPage />} />
-          <Route path="lost" element={<LostPage />} />
+          <Route path="items" element={<LostPage />} />
           <Route path="claimed" element={<ClaimedItems />} />
         </Routes>
       </Router>

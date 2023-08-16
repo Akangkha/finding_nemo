@@ -5,18 +5,25 @@ import LostItem from "../assets/sample-lost.jpeg";
 const ListItem = () => {
   return (
     <div className="itemContainer">
-      <img src={LostItem} alt="" width={200} height={300} />
+      <div className="itemImageContainer">
+      <img src={LostItem} alt="" width="100%"/></div>
       <div className="innerContainer">
         <div>Item Name</div>
         <div>Student Name</div>
-        <br />
+        <hr/>
+        
         <div>Description: Item Description</div>
         <div>Contact Email</div>
         <div>Lost Location</div>
         <div>Item Reported On</div>
+      </div> 
+      <div className="itemButtons">
+      <div className="status">
+        <button>PENDING</button>
       </div>
       <div className="itemFound">
-        <button>Found IT</button>
+        <button>CLAIM IT</button>
+      </div>
       </div>
     </div>
   );
