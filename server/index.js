@@ -1,26 +1,50 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
 import express from "express";
+import morgan from "morgan";
+import dotenv from "dotenv";
 import cors from "cors";
-// import item from "./src/routes/item";
-const app = express();
-const PORT = process.env.PORT || 3300;
+
+import lostItemRoutes from "./src/routes/lostItem.js";
 
 dotenv.config();
 
-app.use(cors());
+const app = express();
 app.use(express.json());
-// app.use("/items", item);
 
-app.get("/", (req, res) => {
-  res.send("root directory");
+const PORT = process.env.PORT || 5000;
+
+const corsConfig = {
+  credentials: true,
+  origin: true,
+};
+
+app.use(cors(corsConfig));
+
+app.use(morgan("tiny"));
+
+// Use the authRoutes
+app.use("/lostItem", lostItemRoutes);
+
+app.use((err, req, res, next) => {
+  const status = err.status || 500;
+  const message = err.message || "Something went wrong";
+  return res.status(status).json({
+    success: false,
+    status,
+    message,
+  });
 });
 
+// Start the server
+
+mongoose.set("strictQuery", true);
 mongoose
   .connect(process.env.CONNECTION_URL)
-  .then(() =>
+  .then(() => {
     app.listen(PORT, () => {
-      console.log(`Databse connected and server is running on port ${PORT}`);
-    })
-  )
-  .catch((err) => console.log(err));
+      console.log(`Server is running on port ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.error("MongoDB connection error:", error);
+  });
