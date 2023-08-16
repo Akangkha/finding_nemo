@@ -4,6 +4,7 @@
   align-items: center;
   padding: 20px 50px;
   box-shadow: #959da533 0px 8px 24px;
+  background-color:  white;
 }
 
 .navBar > div:nth-child(2) {

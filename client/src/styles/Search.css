@@ -21,3 +21,8 @@
   outline: none;
   background: transparent;
 }
+
+::placeholder
+{
+  font-weight: bold;
+}
