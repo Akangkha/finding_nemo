@@ -13,10 +13,12 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
-const corsConfig = {
-  credentials: true,
-  origin: true,
+const corsConfig={
+  credentials: "true",
+  origin: "http://localhost:3000",
+  optionSuccessStatus: "200",
 };
+
 
 app.use(cors(corsConfig));
 

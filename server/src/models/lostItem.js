@@ -8,7 +8,6 @@ const lostItemSchema = new mongoose.Schema(
     itemDescription: { type: String, required: true },
     email: { type: String, required: true },
     lostLocation: { type: String, required: true },
-    lostTime: { type: String, required: true },
     category: {
       type: String,
       enum: ["LOST", "FOUND"],
