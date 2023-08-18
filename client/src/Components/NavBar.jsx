@@ -21,7 +21,7 @@ const NavBar = (props) => {
         </Link>
 
         <div
-          className=" cursor-pointer navItem navButton"
+          className=" cursor-pointer navItem "
           onClick={() => props.updateItem()}
         >
           Report an item !

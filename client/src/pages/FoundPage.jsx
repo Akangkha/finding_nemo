@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/FoundCard.css";
+import "../styles/Card.css";
 import Card from "../Components/Card";
 import NavBar from "../Components/NavBar";
 import Search from "../Components/Search";
@@ -18,7 +18,7 @@ const FoundPage = () => {
 
   return (
     <div
-      className="claimCard"
+      className="lostCard"
       style={{ overflow: foundState ? "hidden" : "auto" }}
     >
       <NavBar updateItem={updateItem} section={page} />
