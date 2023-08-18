@@ -9,8 +9,10 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CategoryIcon from "@mui/icons-material/Category";
 import "../styles/Card.css";
 import axios from "axios";
+import { ThreeDots } from "react-loader-spinner";
 
 const Card = (props) => {
+  const [spinner, setSpinner] = useState(false);
   const [formFields, setFormFields] = useState({
     image: upload,
     studentName: "",
@@ -18,7 +20,7 @@ const Card = (props) => {
     itemDescription: "",
     email: "",
     lostLocation: "",
-    lostTime: "time",
+    lostTime: "",
     category: "",
   });
 
@@ -53,15 +55,16 @@ const Card = (props) => {
       alert("Invalid Image");
       return;
     }
+    setSpinner(true);
     try {
       const response = await axios.post(
         "https://finding-nemo.onrender.com/lostItem/addLostItem",
         formFields
       );
-      console.log("Form Data:", formFields);
-      console.log(response.data);
+      setSpinner(false);
     } catch (error) {
       console.error("Error:", error);
+      setSpinner(false);
     }
   };
 
@@ -85,7 +88,7 @@ const Card = (props) => {
               name=""
               id=""
               accept="image/*"
-              className="btnGraphic fileInput"
+              className="btnGraphic fileInput bg-grad"
               style={{ paddingLeft: "10px", paddingRight: "0" }}
               onChange={handleImage}
             />
@@ -151,9 +154,18 @@ const Card = (props) => {
               </select>
             </div>
             <div className="submitBtn">
-              <button className="btnGraphic" type="submit">
-                Submit
-              </button>
+              <div className="btnOuter">
+                <ThreeDots
+                  height="30"
+                  width="30"
+                  color="#fff"
+                  ariaLabel="three-dots-loading"
+                  visible={spinner}
+                />
+                <button className="btnGraphic" type="submit">
+                  Submit
+                </button>
+              </div>
             </div>
           </form>
         </div>
