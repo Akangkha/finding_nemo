@@ -18,6 +18,7 @@ const Card = (props) => {
     itemDescription: "",
     email: "",
     lostLocation: "",
+    lostTime: "",
     category: "",
   });
 
