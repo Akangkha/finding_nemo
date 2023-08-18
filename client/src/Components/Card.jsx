@@ -72,7 +72,7 @@ const Card = (props) => {
       {props.returnTo=="foundPage" &&  <div className="closeIcon" onClick={() => {props.updateItemFound()}}>
           <CloseIcon />
         </div>
-        </div>}
+        }
         {props.returnTo=="lostPage" &&  <div className="closeIcon" onClick={() => {props.updateItemLost()}}>
           <CloseIcon />
         </div>}
@@ -159,7 +159,7 @@ const Card = (props) => {
       </div>
     </div>
   );
-};
+            }
 
 export default Card;
 
