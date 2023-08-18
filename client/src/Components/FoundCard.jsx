@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import upload from "../assets/gallery.png";
 import CloseIcon from "@mui/icons-material/Close";
 import PersonIcon from "@mui/icons-material/Person";
@@ -8,17 +8,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "../styles/Card.css";
 
-
-const FoundCard = () => {
-  return (
-    <div className="FoundContainer">
-      <div className="FoundImg">
-        <div className="upload">
-          <img src={upload} alt="upload_icon" />
-
-
 const FoundCard = (props) => {
   const [selectedFile, setSelectedFile] = useState(upload);
+
   const handleFile = (e) => {
     const file = e.target.files[0];
     setSelectedFile(URL.createObjectURL(file));
@@ -26,7 +18,12 @@ const FoundCard = (props) => {
   return (
     <div className="lostContainerOuter">
       <div className="lostContainer">
-        <div className="closeIcon" onClick={() => {props.updateItemFound()}}>
+        <div
+          className="closeIcon"
+          onClick={() => {
+            props.updateItemFound();
+          }}
+        >
           <CloseIcon />
         </div>
 
@@ -34,7 +31,6 @@ const FoundCard = (props) => {
           <div></div>
           <img src={selectedFile} alt="logo" width={100} />
           <div className="uploadImgInput">
-            
             <input
               type="file"
               name=""
@@ -53,7 +49,9 @@ const FoundCard = (props) => {
         <div className="details">
           <div>
             <div className="heading">Report an item !</div>
-            <div className="titleInfo">Enter necessary details related to your item.</div>
+            <div className="titleInfo">
+              Enter necessary details related to your item.
+            </div>
           </div>
           <form
             method="POST"

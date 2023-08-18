@@ -7,9 +7,10 @@ import "../styles/Card.css";
 
 const LostPage = () => {
   const [lostState, setLostState] = useState(false);
-  const updateItemLost = () => {
+  const updateItem = () => {
     setLostState(!lostState);
   };
+  const page = "LOST";
 
   const [search, setSearch] = useState("");
   const updateSearch = (txt) => {
@@ -21,10 +22,10 @@ const LostPage = () => {
       className="lostCard"
       style={{ overflow: lostState ? "hidden" : "auto" }}
     >
-   <NavBar updateItemLost={updateItemLost}  navItem="Found Something ?"  cardType="lost"/>
-      {lostState && <Card updateItemLost={updateItemLost} returnTo="lostPage" />}
+      <NavBar updateItem={updateItem} section={page} />
+      {lostState && <Card updateItem={updateItem} />}
       <Search updateSearch={updateSearch} />
-      <ListItem searchText={search} section={"LOST"} />
+      <ListItem searchText={search} section={page} />
     </div>
   );
 };

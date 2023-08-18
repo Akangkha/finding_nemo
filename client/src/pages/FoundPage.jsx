@@ -7,23 +7,24 @@ import ListItem from "../Components/ListItem";
 
 const FoundPage = () => {
   const [foundState, setFoundState] = useState(false);
-  const updateItemFound = () => {
+  const updateItem = () => {
     setFoundState(!foundState);
   };
   const [search, setSearch] = useState("");
   const updateSearch = (txt) => {
     setSearch(txt);
   };
+  const page = "FOUND";
 
   return (
     <div
       className="claimCard"
       style={{ overflow: foundState ? "hidden" : "auto" }}
     >
-     <NavBar  updateItemFound={updateItemFound}    navItem="Lost Something ?" cardType="found"/>
-      {foundState && <Card updateItemFound={updateItemFound}  returnTo="foundPage"  />}
+      <NavBar updateItem={updateItem} section={page} />
+      {foundState && <Card updateItem={updateItem} />}
       <Search updateSearch={updateSearch} />
-      <ListItem searchText={search} section={"FOUND"} />
+      <ListItem searchText={search} section={page} />
     </div>
   );
 };
