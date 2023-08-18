@@ -1,29 +1,57 @@
 import React from "react";
 import "../styles/Items.css";
-import LostItem from "../assets/sample-lost.jpeg";
+import DescriptionIcon from "@mui/icons-material/Description";
+import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import CategoryIcon from "@mui/icons-material/Category";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
-const ListItem = () => {
+const ListItem = (props) => {
   return (
     <div className="itemContainer">
       <div className="itemImageContainer">
-      <img src={LostItem} alt="" width="100%"/></div>
+        <img src={props.data.image} alt="" width="100%" />
+      </div>
       <div className="innerContainer">
-        <div>Item Name</div>
-        <div>Student Name</div>
-        <hr/>
-        
-        <div>Description: Item Description</div>
-        <div>Contact Email</div>
-        <div>Lost Location</div>
-        <div>Item Reported On</div>
-      </div> 
-      <div className="itemButtons">
-      <div className="status">
-        <button>PENDING</button>
-      </div>
-      <div className="itemFound">
-        <button>CLAIM IT</button>
-      </div>
+        <div>
+          <span>{props.data.itemTitle}</span>
+        </div>
+        <div>
+          <span>{props.data.studentName}</span>
+        </div>
+        <hr />
+        <div>
+          <DescriptionIcon style={{ fontSize: "medium" }} />
+          <span>{props.data.itemDescription}</span>
+        </div>
+        <div>
+          <CalendarMonthIcon style={{ fontSize: "medium" }} />
+          <span>{new Date(props.data.createdAt).toDateString()}</span>
+        </div>
+        <div style={{ color: "#007bff", cursor: "pointer" }}>
+          <EmailIcon style={{ fontSize: "medium" }} />
+          <a
+            href={`mailto:@${props.data.email}`}
+            style={{ textDecoration: "none" }}
+          >
+            {props.data.email}
+          </a>
+        </div>
+        <div>
+          <LocationOnIcon style={{ fontSize: "medium" }} />
+          <span>{props.data.lostLocation}</span>
+        </div>
+        <div
+          className="category"
+          style={{
+            backgroundColor:
+              props.data.category === "LOST" ? "#e57373" : " #66bb6a",
+            cursor: "default",
+          }}
+        >
+          <CategoryIcon style={{ fontSize: "medium" }} />
+          <span>{props.data.category}</span>
+        </div>
       </div>
     </div>
   );

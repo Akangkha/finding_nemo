@@ -9,6 +9,14 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "../styles/Card.css";
 
 
+const FoundCard = () => {
+  return (
+    <div className="FoundContainer">
+      <div className="FoundImg">
+        <div className="upload">
+          <img src={upload} alt="upload_icon" />
+
+
 const FoundCard = (props) => {
   const [selectedFile, setSelectedFile] = useState(upload);
   const handleFile = (e) => {

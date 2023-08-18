@@ -4,7 +4,7 @@
   align-items: center;
   padding: 20px 50px;
   box-shadow: #959da533 0px 8px 24px;
-  background-color:  white;
+  background-color: white;
 }
 
 .navBar > div:nth-child(2) {
@@ -17,18 +17,22 @@
   font-weight: bold;
   font-size: x-large;
   color: #019aff;
- 
+  text-decoration: none;
 }
+
 .color-blue:hover {
   color: #019aff;
 }
 
-.cursor-pointer {
-  text-decoration: none;
-  cursor: pointer;
-}
 .navItem {
+  text-decoration: none;
   cursor: pointer;
   color: black;
 }
 
+.navButton {
+  padding: 10px 20px;
+  background-color: #019aff;
+  color: white;
+  border-radius: 5px;
+}

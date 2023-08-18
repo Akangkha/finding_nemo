@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import "../styles/Search.css";
 
-const Search = () => {
+const Search = (props) => {
   const [srcTxt, setSrcTxt] = useState("");
-  useEffect(() => {
-    console.log(srcTxt);
-  }, [srcTxt]);
   return (
     <div className="searchOuter">
       <div className="searchBar">
@@ -14,9 +11,10 @@ const Search = () => {
         <input
           type="text"
           placeholder="Search Bar"
+          className="font-lato"
           value={srcTxt}
           onChange={(e) => {
-            setSrcTxt(e.target.value);
+            props.handleSearch(e.target.value);
           }}
         />
       </div>

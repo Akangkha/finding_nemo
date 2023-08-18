@@ -11,15 +11,20 @@ const LostPage = () => {
     setLostState(!lostState);
   };
 
+  const [search, setSearch] = useState("");
+  const updateSearch = (txt) => {
+    setSearch(txt);
+  };
+
   return (
     <div
       className="lostCard"
       style={{ overflow: lostState ? "hidden" : "auto" }}
     >
-      <NavBar updateItemLost={updateItemLost}  navItem="Found Something ?"  cardType="lost"/>
+   <NavBar updateItemLost={updateItemLost}  navItem="Found Something ?"  cardType="lost"/>
       {lostState && <Card updateItemLost={updateItemLost} returnTo="lostPage" />}
-      <Search />
-      <ListItem />
+      <Search updateSearch={updateSearch} />
+      <ListItem searchText={search} section={"LOST"} />
     </div>
   );
 };
