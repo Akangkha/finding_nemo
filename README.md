@@ -1,4 +1,6 @@
-Finding Nemo - a well built web application for the students of Kiit University which acts as a LOST & FOUND APP.
+# Finding Nemo
+
+A well built web application for the students of Kiit University which acts as a LOST & FOUND APP.
 
 🔹Users can upload item images and file in a lost report.
 

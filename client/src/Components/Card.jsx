@@ -67,20 +67,19 @@ const Card = (props) => {
 
   return (
     <div className="lostContainerOuter">
-     
       <div className="lostContainer">
-      {props.returnTo=="foundPage" &&  <div className="closeIcon" onClick={() => {props.updateItemFound()}}>
+        <div
+          className="closeIcon"
+          onClick={() => {
+            props.updateItem();
+          }}
+        >
           <CloseIcon />
         </div>
-        }
-        {props.returnTo=="lostPage" &&  <div className="closeIcon" onClick={() => {props.updateItemLost()}}>
-          <CloseIcon />
-        </div>}
         <div className="uploadImg">
           <div></div>
           <img src={formFields.image} alt="logo" width={100} id="imager" />
           <div className="uploadImgInput">
-            
             <input
               type="file"
               name=""
@@ -96,7 +95,9 @@ const Card = (props) => {
         <div className="details">
           <div>
             <div className="heading">Report an item !</div>
-            <div className="titleInfo">Enter necessary details related to your item.</div>
+            <div className="titleInfo">
+              Enter necessary details related to your item.
+            </div>
           </div>
           <form method="POST" onSubmit={handleFormSubmit}>
             {[
@@ -159,7 +160,7 @@ const Card = (props) => {
       </div>
     </div>
   );
-            }
+};
 
 export default Card;
 
