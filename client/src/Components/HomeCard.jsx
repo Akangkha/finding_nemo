@@ -32,7 +32,7 @@ const HomeCard = () => {
               Let's Get Started
               <KeyboardDoubleArrowRightIcon className="arrow" />
             </button>
-
+          </Link>
         </div>
       </div>
     </div>
