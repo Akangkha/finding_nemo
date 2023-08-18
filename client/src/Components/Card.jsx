@@ -123,7 +123,7 @@ const Card = (props) => {
               {
                 icon: <LocationOnIcon />,
                 name: "lostLocation",
-                placeholder: "Lost Location",
+                placeholder: "Location",
               },
             ].map((inputField, index) => (
               <div className="inputField" key={index}>
