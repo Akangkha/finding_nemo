@@ -1,7 +1,6 @@
 .container {
   display: grid;
   place-items: center;
-  padding: 20px 20px;
 }
 
 .innerContainer > div {
@@ -15,9 +14,8 @@
 .itemContainer {
   overflow: hidden;
   width: 70vw;
-  height: 50vh;
   min-width: 263px;
-  min-height: 191px;
+  height: 50vh;
   margin: 30px;
   border-radius: 15px;
   box-shadow: 5px 9px 24px 10px rgba(66, 65, 65, 0.1);
@@ -28,7 +26,6 @@
 }
 
 .innerContainer {
-  border-left: 1px solid rgb(180, 180, 180);
   height: 100%;
   padding: 0 0 0 20px;
   width: 100%;
@@ -39,10 +36,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-}
-.innerContainer > div {
   font-size: medium;
 }
+
 .innerContainer > div:nth-child(1) {
   font-weight: bold;
   font-size: xx-large;
@@ -56,7 +52,7 @@
 .category {
   padding: 5px 20px;
   border-radius: 10px;
-  margin: 5px;
+  margin: 10px 0;
 }
 
 .itemFound,
@@ -85,18 +81,14 @@
   font-weight: bold;
   cursor: pointer;
 }
-.status {
-  right: 150px;
-}
-.status > button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  font-weight: bold;
-}
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 768px) {
+  .innerContainer > hr {
+    margin: 10px 50px 10px 0;
+  }
+
   .itemContainer {
+    width: 80vw;
     display: flex;
     flex-direction: column;
     height: 70vh;
@@ -106,22 +98,15 @@
     width: 100%;
     height: 100%;
   }
+
   .itemImageContainer > img {
     height: 100%;
-  }
-  .itemButtons {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-bottom: 30px;
-  }
-
-  .status,
-  .itemFound {
-    position: static;
   }
 
   .innerContainer > div:nth-child(1) {
     margin-top: 0;
+  }
+  .category {
+    margin: 15px 0;
   }
 }

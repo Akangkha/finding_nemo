@@ -6,7 +6,7 @@ import Search from "../Components/Search";
 import "../styles/Card.css";
 
 const LostPage = () => {
-  const [lostState, setLostState] = useState(false);
+  const [lostState, setLostState] = useState(true);
   const updateItem = () => {
     setLostState(!lostState);
   };

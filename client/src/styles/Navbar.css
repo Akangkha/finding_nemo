@@ -20,19 +20,12 @@
   text-decoration: none;
 }
 
-.color-blue:hover {
-  color: #019aff;
-}
-
 .navItem {
   text-decoration: none;
   cursor: pointer;
   color: black;
 }
 
-.navButton {
-  padding: 10px 20px;
-  background-color: #019aff;
-  color: white;
-  border-radius: 5px;
+.navItem:hover {
+  color: #019aff;
 }

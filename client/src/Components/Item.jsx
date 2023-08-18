@@ -5,6 +5,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CategoryIcon from "@mui/icons-material/Category";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import LinkIcon from "@mui/icons-material/Link";
 
 const ListItem = (props) => {
   return (
@@ -28,13 +29,11 @@ const ListItem = (props) => {
           <CalendarMonthIcon style={{ fontSize: "medium" }} />
           <span>{new Date(props.data.createdAt).toDateString()}</span>
         </div>
-        <div style={{ color: "#007bff", cursor: "pointer" }}>
+        <div>
           <EmailIcon style={{ fontSize: "medium" }} />
-          <a
-            href={`mailto:@${props.data.email}`}
-            style={{ textDecoration: "none" }}
-          >
-            {props.data.email}
+          <span>{props.data.email}</span>
+          <a href={`mailto:${props.data.email}`}>
+            <LinkIcon />
           </a>
         </div>
         <div>
