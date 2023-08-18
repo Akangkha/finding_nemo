@@ -8,10 +8,9 @@
 .searchBar {
   border: 1px solid #019aff;
   width: 50%;
-  padding: 10px 20px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
-
   border-radius: 30px;
   gap: 10px;
 }
@@ -19,10 +18,11 @@
 .searchBar > input {
   border: none;
   outline: none;
+  height: 40px;
   background: transparent;
+  width: 100%;
 }
 
-::placeholder
-{
-  font-weight: bold;
+::placeholder {
+  font-weight: 600;
 }

@@ -80,14 +80,12 @@
   color: white;
   font-weight: bold;
   border: transparent;
-
   word-wrap: break-word;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   align-items: center;
 }
 
 .button {
- 
   border: none;
   background: transparent;
   color: white;
@@ -96,8 +94,7 @@
   bottom: 5px;
 }
 
-.arrow
-{
+.arrow {
   position: relative;
-  top:7px;
+  top: 7px;
 }

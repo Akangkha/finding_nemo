@@ -11,6 +11,11 @@ const LostPage = () => {
     setLostState(!lostState);
   };
 
+  const [search, setSearch] = useState("");
+  const updateSearch = (txt) => {
+    setSearch(txt);
+  };
+
   return (
     <div
       className="lostCard"
@@ -18,8 +23,8 @@ const LostPage = () => {
     >
       <NavBar updateItemLost={updateItemLost} />
       {lostState && <Card updateItemLost={updateItemLost} />}
-      <Search />
-      <ListItem />
+      <Search updateSearch={updateSearch} />
+      <ListItem searchText={search} section={"LOST"} />
     </div>
   );
 };

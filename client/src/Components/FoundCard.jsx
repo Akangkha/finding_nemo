@@ -3,11 +3,9 @@ import "../styles/FoundCard.css";
 import upload from "../assets/gallery.png";
 import CloseIcon from "@mui/icons-material/Close";
 
-
 const FoundCard = () => {
   return (
     <div className="FoundContainer">
-      
       <div className="FoundImg">
         <div className="upload">
           <img src={upload} alt="upload_icon" />

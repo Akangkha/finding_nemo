@@ -4,16 +4,16 @@ import "./Components/FoundCard";
 import FoundPage from "./pages/FoundPage";
 import LostPage from "./pages/LostPage";
 import HomePage from "./pages/HomePage";
-import ClaimedItems from "./pages/ClaimedItems";
 import "./App.css";
+
 function App() {
   return (
     <div className="screen">
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="items" element={<LostPage />} />
-          <Route path="claimed" element={<ClaimedItems />} />
+          <Route path="lost" element={<LostPage />} />
+          <Route path="found" element={<FoundPage />} />
         </Routes>
       </Router>
     </div>

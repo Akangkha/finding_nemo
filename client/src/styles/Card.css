@@ -1,5 +1,4 @@
-.lostCard,
-.claimCard {
+.lostCard {
   height: 100%;
   width: 100%;
   background-color: #e7f7ff;
@@ -61,7 +60,7 @@
 
 form {
   width: 100%;
-  margin: 20px 0 0 0;
+  margin: 15px 0 0 0;
 }
 
 .inputField {
@@ -70,21 +69,22 @@ form {
   width: 90%;
   height: 20px;
   padding: 8px;
-  margin: 5px;
+  margin: 10px;
   border: none;
   background-color: rgba(228, 225, 225, 0.466);
   border-radius: 5px;
-  gap: 20px;
 }
 
 .inputField > svg {
   font-size: larger;
 }
+
 .inputField > input {
   width: 100%;
   border: none;
   outline: none;
   background: transparent;
+  margin-left: 20px;
 }
 
 .btnGraphic {
@@ -95,6 +95,7 @@ form {
   color: white;
   font-weight: bold;
   border: none;
+  outline: none;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -107,4 +108,16 @@ form {
 
 .noAppear {
   appearance: none;
+}
+
+.select {
+  width: 100%;
+  outline: none;
+  background: transparent;
+  padding: 8px;
+  text-indent: 10px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #757575;
 }
