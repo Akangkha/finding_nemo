@@ -14,6 +14,7 @@ const LostPage = () => {
 
   const [search, setSearch] = useState("");
   const updateSearch = (txt) => {
+    console.log(txt);
     setSearch(txt);
   };
 

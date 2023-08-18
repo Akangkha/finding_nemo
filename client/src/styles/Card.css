@@ -89,27 +89,38 @@ form {
 }
 
 .btnGraphic {
-  margin: 5px;
-  background: linear-gradient(90.04deg, #019aff, rgb(21, 3, 65) 99.96%);
-  padding: 5px 25px;
-  border-radius: 10px;
   color: white;
   font-weight: bold;
+  background: transparent;
+  padding: 10px 10px;
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.btnOuter {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0 20px;
+  outline: none;
+  transition: all 0.5s;
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  background: linear-gradient(90.04deg, #019aff, rgb(21, 3, 65) 99.96%);
 }
 
-.btnGraphic:hover {
-  transform: scale(1.05);
-  transition-timing-function: ease-in;
+.bg-grad {
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(90.04deg, #019aff, rgb(21, 3, 65) 99.96%);
 }
-
 .submitBtn {
   margin: 10px auto;
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .noAppear {

@@ -14,7 +14,7 @@ const Search = (props) => {
           className="font-lato"
           value={srcTxt}
           onChange={(e) => {
-            props.handleSearch(e.target.value);
+            props.updateSearch(e.target.value);
           }}
         />
       </div>
