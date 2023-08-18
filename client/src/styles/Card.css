@@ -5,7 +5,7 @@
 }
 
 .lostContainerOuter {
-  height: 100%;
+  height:100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -54,8 +54,9 @@
 }
 
 .details > div {
-  line-height: 0.5;
+
   width: 100%;
+
 }
 
 form {
@@ -98,8 +99,12 @@ form {
   outline: none;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+ 
 }
-
+.btnGraphic:hover{
+  transform: scale(1.05);
+  transition-timing-function: ease-in;
+}
 .submitBtn {
   margin: 10px auto;
   width: 100%;
@@ -120,4 +125,76 @@ form {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #757575;
+}
+
+input::file-selector-button 
+{
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  margin-right: 10%;
+}
+
+
+input::file-selector-button:hover
+{
+  background-color: rgb(108, 165, 141);
+  color: black;
+}
+
+
+.heading
+{
+  position: relative;
+  top:20px;
+  font-size:2rem;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+
+@media only screen and (max-width: 983px) {
+
+  .heading
+  {
+    font-size: 1.8rem;
+  }
+
+  .titleInfo
+  {
+    font-size: 0.7rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 930px) {
+  .lostContainer
+  {
+    flex-direction: column;
+    height: min-content;
+    margin: 100px;
+    padding-top: 60px 
+  }
+  .lostContainerOuter
+  {
+    height: min-content;
+  }
+
+  .fileInput
+  {
+    width: 100%;
+  }
+
+  .uploadImgInput
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

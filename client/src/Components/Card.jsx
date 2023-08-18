@@ -67,20 +67,26 @@ const Card = (props) => {
 
   return (
     <div className="lostContainerOuter">
+     
       <div className="lostContainer">
-        <div className="closeIcon" onClick={() => props.updateItemLost()}>
+      {props.returnTo=="foundPage" &&  <div className="closeIcon" onClick={() => {props.updateItemFound()}}>
           <CloseIcon />
         </div>
+        </div>}
+        {props.returnTo=="lostPage" &&  <div className="closeIcon" onClick={() => {props.updateItemLost()}}>
+          <CloseIcon />
+        </div>}
         <div className="uploadImg">
           <div></div>
           <img src={formFields.image} alt="logo" width={100} id="imager" />
           <div className="uploadImgInput">
+            
             <input
               type="file"
               name=""
               id=""
               accept="image/*"
-              className="btnGraphic"
+              className="btnGraphic fileInput"
               style={{ paddingLeft: "10px", paddingRight: "0" }}
               onChange={handleImage}
             />
@@ -89,8 +95,8 @@ const Card = (props) => {
         <div className="divider"></div>
         <div className="details">
           <div>
-            <h1>Report an item !</h1>
-            <p>Enter necessary details related to your item.</p>
+            <div className="heading">Report an item !</div>
+            <div className="titleInfo">Enter necessary details related to your item.</div>
           </div>
           <form method="POST" onSubmit={handleFormSubmit}>
             {[

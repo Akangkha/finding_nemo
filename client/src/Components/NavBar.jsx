@@ -9,18 +9,38 @@ const NavBar = (props) => {
         Finding Nemo
       </Link>
       <div>
-        <Link to="/found" className="color-blue navItem">
-          Found
-        </Link>
-        <Link to="/lost" className="color-blue navItem">
-          Lost
-        </Link>
+         {props.navItem=="Found Something ?" &&
+        <Link to="/found" style={{ textDecoration: "none" }}>
+        <div
+          className="color-blue cursor-pointer navItem navButton"
+        >
+            {props.navItem}
+        </div>
+        </Link>}
+
+        {props.navItem=="Lost Something ?" &&
+        <Link to="/lost" style={{ textDecoration: "none" }}>
+        <div
+          className="color-blue cursor-pointer navItem navButton"
+        >
+            {props.navItem}
+        </div>
+        </Link>}
+        
+      {props.cardType=="found" &&
+        <div
+          className="color-blue cursor-pointer navItem navButton"
+          onClick={() => props.updateItemFound()}
+        >
+         Report an item !
+        </div>}
+      {props.cardType=="lost" &&
         <div
           className=" cursor-pointer navItem navButton"
           onClick={() => props.updateItemLost()}
         >
-          Report an item !
-        </div>
+         Report an item !
+        </div>}
       </div>
     </div>
   );

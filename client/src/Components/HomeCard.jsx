@@ -29,10 +29,10 @@ const HomeCard = () => {
         <div className="div-button">
           <Link to="/lost" style={{ textDecoration: "none" }}>
             <button className="button">
-              Let's Get Started{" "}
+              Let's Get Started
               <KeyboardDoubleArrowRightIcon className="arrow" />
             </button>
-          </Link>
+
         </div>
       </div>
     </div>
