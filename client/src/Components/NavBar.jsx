@@ -11,17 +11,43 @@ const NavBar = (props) => {
         Finding Nemo
       </Link>
       <div>
+
+
+      {props.cardType=="found" &&
+        <div
+          className="color-blue cursor-pointer navItem navButton"
+          onClick={() => props.updateItemFound()}
+        >
+         Report an item !
+        </div>}
+
+       
+      {props.cardType=="lost" &&
         <div
           className="color-blue cursor-pointer navItem navButton"
           onClick={() => props.updateItemLost()}
         >
-          Report an item !
+         Report an item !
+        </div>}
+
+        {props.navItem=="Found Something ?" &&
+        <Link to="/itemsFound" style={{ textDecoration: "none" }}>
+        <div
+          className="color-blue cursor-pointer navItem navButton"
+        >
+            {props.navItem}
         </div>
-        <Tooltip title="Claimed items" arrow>
-          <Link to="/claimed" style={{ textDecoration: "none" }}>
-            <BookmarkAddedIcon className="color-blue cursor-pointer navItem" />
-          </Link>
-        </Tooltip>
+        </Link>}
+
+        {props.navItem=="Lost Something ?" &&
+        <Link to="/itemsLost" style={{ textDecoration: "none" }}>
+        <div
+          className="color-blue cursor-pointer navItem navButton"
+        >
+            {props.navItem}
+        </div>
+        </Link>}
+        
       </div>
     </div>
   );

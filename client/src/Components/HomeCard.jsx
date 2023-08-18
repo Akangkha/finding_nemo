@@ -27,7 +27,7 @@ const HomeCard = () => {
         <img src={IoTlogo} width="10%" draggable="false" alt="Card" />
         <img src={homeImage} width="100%" draggable="false" alt="Card " />
         <div className="div-button">
-          <Link to="/items" style={{ textDecoration: "none" }}>
+          <Link to="/itemsLost" style={{ textDecoration: "none" }}>
           <button className="button">Let's Get Started <KeyboardDoubleArrowRightIcon className="arrow"/></button>
          
           </Link>

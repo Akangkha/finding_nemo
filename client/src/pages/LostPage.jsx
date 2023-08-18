@@ -16,8 +16,8 @@ const LostPage = () => {
       className="lostCard"
       style={{ overflow: lostState ? "hidden" : "auto" }}
     >
-      <NavBar updateItemLost={updateItemLost} />
-      {lostState && <Card updateItemLost={updateItemLost} />}
+      <NavBar updateItemLost={updateItemLost}  navItem="Found Something ?"  cardType="lost"/>
+      {lostState && <Card updateItemLost={updateItemLost} returnTo="lostPage" />}
       <Search />
       <ListItem />
     </div>

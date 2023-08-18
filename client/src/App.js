@@ -4,7 +4,7 @@ import "./Components/FoundCard";
 import FoundPage from "./pages/FoundPage";
 import LostPage from "./pages/LostPage";
 import HomePage from "./pages/HomePage";
-import ClaimedItems from "./pages/ClaimedItems";
+
 import "./App.css";
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="items" element={<LostPage />} />
-          <Route path="claimed" element={<ClaimedItems />} />
+          <Route path="itemsLost" element={<LostPage />} />
+          <Route path="itemsFound" element={<FoundPage/>} />
         </Routes>
       </Router>
     </div>

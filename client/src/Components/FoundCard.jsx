@@ -1,53 +1,86 @@
-import React from "react";
-import "../styles/FoundCard.css";
+import React,{useState} from "react";
 import upload from "../assets/gallery.png";
 import CloseIcon from "@mui/icons-material/Close";
+import PersonIcon from "@mui/icons-material/Person";
+import TitleIcon from "@mui/icons-material/Title";
+import DescriptionIcon from "@mui/icons-material/Description";
+import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import "../styles/Card.css";
 
 
-const FoundCard = () => {
+const FoundCard = (props) => {
+  const [selectedFile, setSelectedFile] = useState(upload);
+  const handleFile = (e) => {
+    const file = e.target.files[0];
+    setSelectedFile(URL.createObjectURL(file));
+  };
   return (
-    <div className="FoundContainer">
-      
-      <div className="FoundImg">
-        <div className="upload">
-          <img src={upload} alt="upload_icon" />
+    <div className="lostContainerOuter">
+      <div className="lostContainer">
+        <div className="closeIcon" onClick={() => {props.updateItemFound()}}>
+          <CloseIcon />
         </div>
-        <button className="upload_btn">Upload Image</button>
-      </div>
-      <div className="FoundDetails">
-        <p>Enter the details of the found item! </p>
-        <form method="POST" className="form1">
-          <input className="name" name="Finder_name" placeholder="Your name" />
-          <input
-            type="number"
-            className="inputField"
-            name="finder_phno"
-            placeholder="Contact number"
-          />
 
-          <input
-            type="text"
-            className="inputField"
-            name="finder_email"
-            placeholder="Email"
-          />
+        <div className="uploadImg">
+          <div></div>
+          <img src={selectedFile} alt="logo" width={100} />
+          <div className="uploadImgInput">
+            
+            <input
+              type="file"
+              name=""
+              id=""
+              accept="image/*"
+              className="btnGraphic fileInput"
+              style={{ paddingLeft: "10px", paddingRight: "0" }}
+              onChange={handleFile}
+            />
+            <button className="btnGraphic" style={{ padding: "12.5px 10px" }}>
+              Upload Image
+            </button>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="details">
+          <div>
+            <div className="heading">Report an item !</div>
+            <div className="titleInfo">Enter necessary details related to your item.</div>
+          </div>
+          <form
+            method="POST"
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
+          >
+            <div className="inputField">
+              <PersonIcon />
+              <input type="text" name="" id="" placeholder="Name" />
+            </div>
+            <div className="inputField">
+              <TitleIcon />
+              <input type="text" name="" id="" placeholder="Item Name" />
+            </div>
+            <div className="inputField">
+              <DescriptionIcon />
+              <input type="text" name="" id="" placeholder="Item Description" />
+            </div>
+            <div className="inputField">
+              <EmailIcon />
+              <input type="text" name="" id="" placeholder="Email" />
+            </div>
 
-          <input
-            type="text"
-            className="inputField location"
-            name="spot_location"
-            placeholder="Location ? "
-          />
-
-          <input
-            type="text"
-            className="inputField "
-            name="item_descp"
-            placeholder="Description of item"
-          />
-
-          <input type="submit" value="Submit" className="FoundSubmit" />
-        </form>
+            <div className="inputField">
+              <LocationOnIcon />
+              <input type="text" name="" id="" placeholder="Found Location" />
+            </div>
+            <div className="submitBtn">
+              <button className="btnGraphic" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
