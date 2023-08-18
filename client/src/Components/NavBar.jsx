@@ -13,17 +13,14 @@ const NavBar = (props) => {
           to={props.section !== "LOST" ? "/lost" : "/found"}
           style={{ textDecoration: "none" }}
         >
-          <div className="color-blue cursor-pointer navItem ">
+          <div className=" navItem ">
             {props.section !== "LOST"
               ? "Lost Something ?"
               : "Found Something ?"}
           </div>
         </Link>
 
-        <div
-          className=" cursor-pointer navItem "
-          onClick={() => props.updateItem()}
-        >
+        <div className=" navItem " onClick={() => props.updateItem()}>
           Report an item !
         </div>
       </div>
