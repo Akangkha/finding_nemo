@@ -13,6 +13,7 @@ import { ThreeDots } from "react-loader-spinner";
 
 const Card = (props) => {
   const [spinner, setSpinner] = useState(false);
+  const [submitTxt, setSubmitTxt] = useState("Submit");
   const [formFields, setFormFields] = useState({
     image: upload,
     studentName: "",
@@ -20,7 +21,6 @@ const Card = (props) => {
     itemDescription: "",
     email: "",
     lostLocation: "",
-    lostTime: "",
     category: "",
   });
 
@@ -28,7 +28,6 @@ const Card = (props) => {
     const file = event.target.files[0];
     if (file) {
       const base64 = await convertToBase64(file);
-
       setFormFields((prevFields) => ({
         ...prevFields,
         image: base64,
@@ -51,21 +50,28 @@ const Card = (props) => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    if (formFields.image === upload) {
+    if (!formFields.image) {
       alert("Invalid Image");
       return;
     }
+
     setSpinner(true);
+    console.log(formFields);
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://finding-nemo.onrender.com/lostItem/addLostItem",
         formFields
       );
-      setSpinner(false);
+      setSubmitTxt("Submitted");
+      setTimeout(() => {
+        setSubmitTxt("Submit");
+        window.location.href = formFields.category;
+      }, 1500);
     } catch (error) {
       console.error("Error:", error);
-      setSpinner(false);
+      setSubmitTxt("Retry");
     }
+    setSpinner(false);
   };
 
   return (
@@ -163,7 +169,7 @@ const Card = (props) => {
                   visible={spinner}
                 />
                 <button className="btnGraphic" type="submit">
-                  Submit
+                  {submitTxt}
                 </button>
               </div>
             </div>
