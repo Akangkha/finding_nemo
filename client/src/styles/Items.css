@@ -15,7 +15,7 @@
   overflow: hidden;
   width: 70vw;
   min-width: 263px;
-  height: 50vh;
+  height: 53vh;
   margin: 30px;
   border-radius: 15px;
   box-shadow: 5px 9px 24px 10px rgba(66, 65, 65, 0.1);
@@ -68,7 +68,7 @@
 }
 
 .itemImageContainer > img {
-  height: 50vh;
+  height: 53vh;
   object-fit: cover;
 }
 
