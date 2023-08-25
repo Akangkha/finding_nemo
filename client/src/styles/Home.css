@@ -120,7 +120,7 @@
   
   .homeScreen > svg
   {
-    display: none;
+    /* display: none; */
   }
   .homeContainer_right > img:nth-child(2) {
     margin: 0 0 25px 0;
