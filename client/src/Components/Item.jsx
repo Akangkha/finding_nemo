@@ -32,7 +32,7 @@ const ListItem = (props) => {
         <div>
           <EmailIcon style={{ fontSize: "medium" }} />
           <span>{props.data.email}</span>
-          <a href={`mailto:${props.data.email}`}>
+          <a className="mail-link" href={`mailto:${props.data.email}`}>
             <LinkIcon />
           </a>
         </div>
