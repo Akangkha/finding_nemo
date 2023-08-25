@@ -5,11 +5,12 @@
 }
 
 .lostContainerOuter {
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
