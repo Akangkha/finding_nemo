@@ -4,9 +4,10 @@ import "../styles/Home.css";
 import HomeCard from "../Components/HomeCard";
 
 const HomePage = () => {
+ 
   return (
     <div className="homeScreen">
-      <HomeCard />
+     <HomeCard />
       <Wave />
     </div>
   );

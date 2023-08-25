@@ -110,14 +110,18 @@
 @media only screen and (max-width: 850px) {
   .homeContainer {
     flex-direction: column;
-    min-width: 268px;
-    min-height: 400px;
+    min-width: 19rem;
+    min-height: 250px;
   }
 
   .homeContainer_left {
     display: none;
   }
-
+  
+  .homeScreen > svg
+  {
+    /* display: none; */
+  }
   .homeContainer_right > img:nth-child(2) {
     margin: 0 0 25px 0;
     min-width: 110%;
