@@ -6,6 +6,7 @@ import HomeCard from "../Components/HomeCard";
 const HomePage = () => {
   return (
     <div className="homeScreen">
+      gg
       <HomeCard />
       <Wave />
     </div>
