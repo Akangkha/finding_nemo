@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
+  "engines": {
+      "node": ">=14.20.1"
+    },
   "scripts": {
     "local": "nodemon index.js",
     "dev": "yarn run compile && node build/app.js",
