@@ -10,7 +10,7 @@ const lostItemSchema = new mongoose.Schema(
     lostLocation: { type: String, required: true },
     category: {
       type: String,
-      enum: ["LOST", "FOUND"],
+      enum: ["LOST", "FOUND"], 
       required: true,
     },
   },

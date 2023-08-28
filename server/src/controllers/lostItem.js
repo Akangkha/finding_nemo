@@ -6,7 +6,7 @@ export const addLostItem = async (req, res, next) => {
 
     res
       .status(200)
-      .json({ message: "Lost item added successfully", savedLostItem });
+      .json({ message: "Lost item added successfully message", savedLostItem });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
